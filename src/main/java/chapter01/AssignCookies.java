@@ -1,5 +1,9 @@
 package chapter01;
-//贪心算法
+
+/**
+ * 分配问题
+ */
+
 import java.util.Arrays;
 
 public class AssignCookies {
@@ -7,12 +11,12 @@ public class AssignCookies {
         int[] kids = new int[]{1, 2};
         int[] cookies = new int[]{1, 2, 3};
 
-        System.out.println(new AssignCookies().ac01(kids, cookies));
-        System.out.println(new AssignCookies().ac02(kids, cookies));
+        System.out.println(new AssignCookies().method1(kids, cookies));
+        System.out.println(new AssignCookies().method2(kids, cookies));
 
     }
 
-    int ac01(int[] kids, int[] cookies) {
+    int method1(int[] kids, int[] cookies) {
         Arrays.sort(kids);
         Arrays.sort(cookies);
 
@@ -30,7 +34,7 @@ public class AssignCookies {
         return result;
     }
 
-    int ac02(int[] kids, int[] cookies) {
+    int method2(int[] kids, int[] cookies) {
         Arrays.sort(kids);
         Arrays.sort(cookies);
 
